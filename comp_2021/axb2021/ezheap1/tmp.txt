@@ -1,0 +1,20 @@
+malloc 0x7ff0e372cb10
+top    0x55a834f0b050
+offset 0x2a48ae821ac0
+
+0x7fe161959b10
+0x55e5de9e1050
+
+malloc
+
+  top = 0x55ee490bd010,
+
+Addr: 0x55ee4909a000
+
+top heapbase + 0x23010
+0x20(malloc 0x10)
+top1 heapbase + 0x23010+0x20
+malloc 0x7f74e4508b10
+0x29869b44bad0
+
+0x561078402020

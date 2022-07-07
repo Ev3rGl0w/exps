@@ -1,0 +1,170 @@
+-- Decompiled using luadec 2.2 rev: 895d923 for Lua 5.3 from https://github.com/viruscamp/luadec
+-- Command line: lua.bin 
+
+-- params : ...
+-- function num : 0 , upvalues : _ENV
+Pwnsky = function(name)
+  -- function num : 0_0 , upvalues : _ENV
+  local self = {}
+  local ServerInit = function()
+    -- function num : 0_0_0 , upvalues : self, name, _ENV
+    self.name = name
+    self.account = 0
+    self.password = 0
+    self.is_login = 0
+    self.init = init
+    self.print_logo = print_logo
+  end
+
+  self.info = function()
+    -- function num : 0_0_1 , upvalues : _ENV, self
+    print("Server Info:")
+    local time = (os.date)("%c")
+    print("Server name: " .. self.name)
+    print("Date time: " .. time)
+    if self.is_login == 0 then
+      print("Account status: Not login")
+    else
+      print("Account status: Logined")
+      print("Account : " .. self.account)
+    end
+  end
+
+  self.login = function()
+    -- function num : 0_0_2 , upvalues : _ENV, self
+    print("pwnsky cloud cache login")
+    ;
+    (io.write)("account:")
+    self.account = (io.read)("*number")
+    ;
+    (io.write)("password:")
+    self.password = (io.read)("*number")
+    self.is_login = login(self.account, self.password)
+    if self.is_login == 1 then
+      print("login succeeded!")
+    else
+      print("login failed!")
+    end
+  end
+
+  self.run = function()
+    -- function num : 0_0_3 , upvalues : _ENV, self
+    while 1 do
+      while 1 do
+        while 1 do
+          while 1 do
+            while 1 do
+              while 1 do
+                while 1 do
+                  while 1 do
+                    while 1 do
+                      while 1 do
+                        (io.write)("$")
+                        local ops = (io.read)("*l")
+                        if ops == "login" then
+                          (self.login)()
+                          -- DECOMPILER ERROR at PC12: LeaveBlock: unexpected jumping out IF_THEN_STMT
+
+                          -- DECOMPILER ERROR at PC12: LeaveBlock: unexpected jumping out IF_STMT
+
+                        end
+                      end
+                      if ops == "info" then
+                        (self.info)()
+                        -- DECOMPILER ERROR at PC17: LeaveBlock: unexpected jumping out IF_THEN_STMT
+
+                        -- DECOMPILER ERROR at PC17: LeaveBlock: unexpected jumping out IF_STMT
+
+                      end
+                    end
+                    if ops == "add" then
+                      if self.is_login == 1 then
+                        print("size?")
+                        size = (io.read)("*number")
+                        idx = add_data(size)
+                        print("Data index: " .. idx)
+                        -- DECOMPILER ERROR at PC40: LeaveBlock: unexpected jumping out IF_THEN_STMT
+
+                        -- DECOMPILER ERROR at PC40: LeaveBlock: unexpected jumping out IF_STMT
+
+                        -- DECOMPILER ERROR at PC40: LeaveBlock: unexpected jumping out IF_THEN_STMT
+
+                        -- DECOMPILER ERROR at PC40: LeaveBlock: unexpected jumping out IF_STMT
+
+                      end
+                    end
+                  end
+                  print("login first...")
+                end
+                if ops == "del" then
+                  if self.is_login == 1 then
+                    print("index?")
+                    index = (io.read)("*number")
+                    delete_data(index)
+                    -- DECOMPILER ERROR at PC61: LeaveBlock: unexpected jumping out IF_THEN_STMT
+
+                    -- DECOMPILER ERROR at PC61: LeaveBlock: unexpected jumping out IF_STMT
+
+                    -- DECOMPILER ERROR at PC61: LeaveBlock: unexpected jumping out IF_THEN_STMT
+
+                    -- DECOMPILER ERROR at PC61: LeaveBlock: unexpected jumping out IF_STMT
+
+                  end
+                end
+              end
+              print("login first...")
+            end
+            if ops == "get" then
+              if self.is_login == 1 then
+                print("index?")
+                index = (io.read)("*number")
+                get_data(index)
+                -- DECOMPILER ERROR at PC82: LeaveBlock: unexpected jumping out IF_THEN_STMT
+
+                -- DECOMPILER ERROR at PC82: LeaveBlock: unexpected jumping out IF_STMT
+
+                -- DECOMPILER ERROR at PC82: LeaveBlock: unexpected jumping out IF_THEN_STMT
+
+                -- DECOMPILER ERROR at PC82: LeaveBlock: unexpected jumping out IF_STMT
+
+              end
+            end
+          end
+          print("login first...")
+        end
+        if ops == "help" then
+          print("commands:")
+          print("login")
+          print("info")
+          print("add")
+          print("del")
+          print("get")
+          print("exit")
+          -- DECOMPILER ERROR at PC110: LeaveBlock: unexpected jumping out IF_THEN_STMT
+
+          -- DECOMPILER ERROR at PC110: LeaveBlock: unexpected jumping out IF_STMT
+
+        end
+      end
+      if ops == "exit" then
+        print("exit")
+        break
+      end
+    end
+  end
+
+  ServerInit()
+  return self
+end
+
+main = function()
+  -- function num : 0_1 , upvalues : _ENV
+  alarm(60)
+  local pwn = Pwnsky("pwnsky cloud cache 1.0")
+  pwn:print_logo()
+  pwn:info()
+  pwn:init()
+  pwn:run()
+end
+
+
