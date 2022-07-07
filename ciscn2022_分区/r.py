@@ -1,0 +1,6 @@
+import hashlib
+str1 = "sdsdsdsdssddssddsdsdsdsdssddsdsdsdsdsdsdsdsdssddsdsdsdsdssddssddsdsdsdsdssddsdsdssddsdsdssddssddssddsdsdsdsdssddssddssddsdsdssddssddssddssddsdsdsdsdssddsdsdsdsdssddssddssddsdsdssddsdsdsdsdsdsdsdsds".encode()
+print(str1)
+
+data_sha = hashlib.md5(str1).hexdigest()
+print(data_sha)
